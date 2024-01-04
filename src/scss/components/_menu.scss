@@ -21,4 +21,7 @@
     }
   }
 
+  @include mixin.verysmall {
+    display: none;
+  }
 }
