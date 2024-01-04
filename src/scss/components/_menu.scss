@@ -1,0 +1,24 @@
+@use '../vars';
+@use '../mixin';
+
+.menu {
+  padding: 0 .5rem;
+
+  &-link {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    padding: .5rem;
+    color: var(--text);
+    transition: vars.$defaultTransition;
+
+    @include mixin.small {
+      padding: 1rem;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, .05);
+    }
+  }
+
+}

@@ -1,0 +1,19 @@
+@use '../vars';
+.more{
+    width: 100%;
+    background-color: lightgray;
+    padding: 1rem;
+    text-align: center;
+
+    &__btn{
+        border: 2px solid vars.$blue-dark;
+        color: white;
+        padding: 1rem;
+        border-radius: 30px;
+        font-size: 1.5rem;
+        text-align: center;
+        width: 50%;
+        background-color: vars.$blue-dark;
+
+    }
+}

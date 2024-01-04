@@ -1,0 +1,108 @@
+@use '../mixin';
+@use '../vars';
+
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+}
+
+.card {
+    border-radius: 5px; //on arrondi les cards
+    box-sizing: border-box; // On fixe la taille des card en prenant en compte les padding
+    font-size: 1.5rem;
+    width: 100%;
+    /** Outil pour les box shadow 
+    https://html-css-js.com/css/generator/box-shadow  */
+    -webkit-box-shadow: 0px 10px 13px -7px vars.$border, 5px 4px 16px 3px rgba(0, 0, 0, 0);
+    box-shadow: 0px 10px 13px -7px  vars.$border, 5px 4px 16px 3px rgba(0, 0, 0, 0);
+
+
+
+    @include mixin.medium{
+        width: calc((100% - 2rem) / 2);
+        // ou alors 
+        //width: 45%
+    }
+
+    @include mixin.big{
+        width: calc((100% - 4rem) / 3 )
+    }
+
+
+
+    &__header {
+        background-image: url('https://picsum.photos/160/90');
+        min-height: 30vh;
+        background-size: cover;
+        background-position: center;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        position: relative;
+    }
+
+    &__tags {
+        position: absolute;
+        top: 3vh;
+        right: 2vw;
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__body {
+        padding: 2rem;
+    }
+
+    &__tag--type {
+        @include mixin.tag(vars.$blue-light);
+    }
+
+    &__tag--tomate {
+        @include mixin.tag(vars.$red-light);
+
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__title {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        border-top: 1px solid vars.$border;
+        align-items: center;
+    }
+
+    &__btn {
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__btn--tomate {
+        @include mixin.tag(vars.$red-light);
+    }
+
+    &__btn--check {
+        @include mixin.tag(vars.$blue-light);
+    }
+
+    &__btn--share {
+        @include mixin.tag(vars.$blue-dark);
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: .5rem;
+    }
+}

@@ -1,0 +1,118 @@
+@use './mixin';
+@use './vars';
+* {
+  box-sizing: border-box;
+  line-height: 1.5!important;
+  letter-spacing:.12em!important;
+  word-spacing: .16em !important;
+}
+
+html {
+  overflow-y: scroll;
+  --red-dark: #e66767;
+  --red-light: #ea8685;
+  --blue-dark: #546de5;
+  --blue-light: #778beb;
+  --border: rgba(0, 0, 0, .2);
+  --background: white;
+  --text: black;
+}
+
+body {
+  line-height: 1.4;
+  font-family: Roboto, sans-serif;
+  color: var(--text);
+  background-color: var(--background);
+}
+
+input, select, button, textarea {
+  font: inherit;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--blue-light);
+
+  &:hover {
+    color: var(--blue-dark);
+  }
+}
+
+.skiplink{
+  display: inline-block;
+   color: #555;
+   background: #fff;
+   padding: .5em;
+   position: absolute;
+   left: -99999rem;
+   z-index: 100;
+}
+
+.skiplink:focus{
+  left: 0;
+}
+
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+	-webkit-clip-path: inset(50%) !important;
+		clip-path: inset(50%) !important;  /* 2 */
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;            /* 3 */
+}
+
+
+.emphasis {
+  font-style: italic;
+  opacity: .5;
+}
+
+.richtext {
+  h3 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.15em;
+  }
+
+  ul {
+    margin: 1rem 0;
+    padding-left: 1em;
+    list-style-type: disc;
+  }
+}
+
+h2{
+  font-size: 5vh;
+  font-weight: bold;
+  width: 100%;
+  border-bottom: 1px solid vars.$border;
+  margin: 4vh 0;
+}
+
+main{
+  width: 90%; // on centre le contenu de la page (hors bannière) en fixant la largeur à 80%
+  margin: 0 auto;
+
+  @include mixin.medium{
+    width: 80%;
+  }
+}
+
+input, select, textarea{
+  padding: .5rem;
+  border: 1px solid vars.$border;
+  width: 100%;
+}

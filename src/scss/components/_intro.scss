@@ -1,0 +1,35 @@
+@use '../vars';
+
+.intro{
+    &__text{
+        font-size: 1.5rem; // on fixe la taille de la police à 1.5rem
+    }
+
+    &__links{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 2rem 0;
+        background-color: lightgray;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    &__link{
+        border: 2px solid vars.$blue-dark;
+        color: vars.$blue-dark;
+        padding: 1rem;
+        border-radius: 30px;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    &__link--denonce{
+        color: white;
+        background-color: vars.$blue-dark;
+    }
+
+
+    
+}

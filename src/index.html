@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Accueil - PilOri</title>
+    <link rel="stylesheet" href="./scss/index.scss">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <script src="./js/global.js" type="module" defer></script>
+    <meta name="description" content="Venez dénoncer les sites inaccessibles en leur lançant des tomates !">
+</head>
+
+<body>
+    <a href="#mainContent" class="skiplink">Aller au contenu principal</a>
+    <header class="header">
+        <a class="logo" href="./index.html" aria-label="Retour à l'accueil">
+            <img class="logo-img" src="./img/logo.svg" alt="PilOri - Retour à l'accueil">
+        </a>
+        <nav class="menu" aria-label="Menu principal">
+            <a class="menu-link" href="#" aria-label="Consulter tous les reports">Toutes les tomates</a>
+            <a class="menu-link" href="#" aria-label="Dénoncer un site inaccessible">Dénoncer</a>
+        </nav>
+        <div class="header-tools">
+            <form class="search">
+                <label for="search" class="sr-only">Rechercher</label>
+                <input id="search" name="search" class="search-input" type="search" placeholder="Rechercher...">
+                <button class="search-submit" type="submit">
+                    <i data-feather="search" aria-hidden="true"></i>
+                    <span class="sr-only">Lancer la recherche</span>
+                </button>
+            </form>
+            <div class="account">
+                <a class="account-link account-link--mobile" href="#">
+                    <i data-feather="search" aria-hidden="true"></i>
+                    <span class="sr-only">Rechercher</span>
+                </a>
+                <a class="account-link" href="#" >
+                    <i data-feather="user" aria-hidden="true"></i>
+                    <span class="sr-only">Profil</span>
+                </a>
+                <a class="account-link" href="#">
+                    <i data-feather="log-out" aria-hidden="true"></i>
+                    <span class="sr-only">Déconnexion</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="banner">
+            <h1 class="banner__title">Pilori</h1>
+        </div>
+
+        <section class="intro">
+            <h2 class="intro__title">A vos tomates</h2>
+            <p class="intro__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sollicitudin ut ipsum eget egestas.
+                Mauris cursus non nibh et tristique. In eu enim ex. Etiam condimentum ante eget risus luctus, vel
+                interdum justo ultricies. Proin egestas, sem sit amet vulputate pellentesque, ipsum diam faucibus
+                sapien, ac semper eros eros at libero. Pellentesque magna metus, aliquam eget urna a, facilisis
+                elementum libero. Mauris vitae gravida ligula, a sodales orci. Morbi varius leo magna, eu tempus tellus
+                scelerisque cursus.
+            </p>
+
+            <ul class="intro__links">
+                <li><a href="#" class="intro__link">Envoyer des tomates</a></li>
+                <li><a href="#" class="intro__link intro__link--denonce">Commencer la dénonciation</a></li>         
+            </ul>
+
+        </section>
+        <section class="pires">
+            <h2 class="pires__title">Les PIRES !</h2>
+
+            <div class="cards">
+                <article class="card">
+                    <header class="card__header">
+                        <div class="card__tags">
+                            <span class="card__tag--type"><span class="sr-only">Catégorie :</span>  Bloquant</span>
+                            <span class="card__tag--tomate">
+                                <i data-feather="circle" aria-hidden="true"></i>
+                                <span class="sr-only">Nombre de tomates lancées</span> 130
+                            </span>
+                        </div>
+                    </header>
+                    <section class="card__body">
+                        <h3 class="card__title">Doctolib</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sollicitudin ut ipsum eget
+                            egestas. Mauris cursus non nibh et tristique. In eu enim ex. Etiam condimentum ante eget risus
+                            luctus, vel interdum justo ultricies. Proin egestas, sem sit amet vulputate pellentesque, ipsum
+                            diam faucibus sapien, ac semper eros eros at libero. Pellentesque magna metus, aliquam eget urna
+                            a, facilisis elementum libero. Mauris vitae gravida ligula, a sodales orci. Morbi varius leo
+                            magna, eu tempus tellus scelerisque cursus.
+    
+                            Sed vitae fringilla elit. Proin vel ultrices arcu. Nunc vel euismod velit. Nunc fermentum dui
+                            nec sodales pellentesque. Duis tempus eros sit amet enim dapibus tempus. Proin porttitor
+                            fringilla sollicitudin. Sed lacus odio, fringilla vel molestie sed, pellentesque ut nisi. Morbi
+                            sagittis magna cursus libero dignissim porttitor. Proin dignissim quam convallis nulla
+                            pellentesque auctor. Etiam lectus eros, ullamcorper non viverra nec, mattis vitae dolor. Sed at
+                            neque fermentum, cursus tellus id, ullamcorper massa. Aenean tellus quam, feugiat a maximus sed,
+                            vehicula non mi.
+                        </p>
+                        <a href="./site_tomate.html" class="card__link" aria-label="Lire la suite : Doctolib">Lire la suite</a>
+                    </section>
+                    <footer class="card__footer">
+                        <a href="https://www.doctolib.fr/" class="card__link" target="_blank">
+                            Consulter le site
+                            <span class="sr-only">Nouvelle fenêtre</span>
+                            <i data-feather="external-link" aria-hidden="true"></i>
+                        </a>
+                        <div class="card__actions">
+                            <button class="card__btn card__btn--tomate">
+                                <i data-feather="circle" aria-hidden="true"></i>
+                                <span class="sr-only">Dénoncer le site</span>
+                            </button>
+                            <button class="card__btn card__btn--check">
+                                <i data-feather="check" aria-hidden="true"></i>
+                                <span class="sr-only">Valider le site</span>
+                            </button>
+                            <button class="card__btn card__btn--share">
+                                <i data-feather="share-2" aria-hidden="true"></i>
+                                <span class="sr-only">Partager le site</span>
+                            </button>
+                        </div>
+                    </footer>
+                </article>
+    
+                <article class="card">
+                    <header class="card__header">
+                        <div class="card__tags">
+                            <span class="card__tag--type"><span class="sr-only">Catégorie :</span>  Bloquant</span>
+                            <span class="card__tag--tomate">
+                                <i data-feather="circle" aria-hidden="true"></i>
+                                <span class="sr-only">Nombre de tomates lancées</span> 130
+                            </span>
+                        </div>
+                    </header>
+                    <section class="card__body">
+                        <h3 class="card__title">Doctolib</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sollicitudin ut ipsum eget
+                            egestas. Mauris cursus non nibh et tristique. In eu enim ex. Etiam condimentum ante eget risus
+                            luctus, vel interdum justo ultricies. Proin egestas, sem sit amet vulputate pellentesque, ipsum
+                            diam faucibus sapien, ac semper eros eros at libero. Pellentesque magna metus, aliquam eget urna
+                            a, facilisis elementum libero. Mauris vitae gravida ligula, a sodales orci. Morbi varius leo
+                            magna, eu tempus tellus scelerisque cursus.
+    
+                            Sed vitae fringilla elit. Proin vel ultrices arcu. Nunc vel euismod velit. Nunc fermentum dui
+                            nec sodales pellentesque. Duis tempus eros sit amet enim dapibus tempus. Proin porttitor
+                            fringilla sollicitudin. Sed lacus odio, fringilla vel molestie sed, pellentesque ut nisi. Morbi
+                            sagittis magna cursus libero dignissim porttitor. Proin dignissim quam convallis nulla
+                            pellentesque auctor. Etiam lectus eros, ullamcorper non viverra nec, mattis vitae dolor. Sed at
+                            neque fermentum, cursus tellus id, ullamcorper massa. Aenean tellus quam, feugiat a maximus sed,
+                            vehicula non mi.
+                        </p>
+                        <a href="./site_tomate.html" class="card__link" aria-label="Lire la suite : Doctolib">Lire la suite</a>
+                    </section>
+                    <footer class="card__footer">
+                        <a href="https://www.doctolib.fr/" class="card__link" target="_blank">
+                            Consulter le site
+                            <span class="sr-only">Nouvelle fenêtre</span>
+                            <i data-feather="external-link" aria-hidden="true"></i>
+                        </a>
+                        <div class="card__actions">
+                            <button class="card__btn card__btn--tomate">
+                                <i data-feather="circle" aria-hidden="true"></i>
+                                <span class="sr-only">Dénoncer le site</span>
+                            </button>
+                            <button class="card__btn card__btn--check">
+                                <i data-feather="check" aria-hidden="true"></i>
+                                <span class="sr-only">Valider le site</span>
+                            </button>
+                            <button class="card__btn card__btn--share">
+                                <i data-feather="share-2" aria-hidden="true"></i>
+                                <span class="sr-only">Partager le site</span>
+                            </button>
+                        </div>
+                    </footer>
+                </article>
+
+                <article class="card">
+                    <header class="card__header">
+                        <div class="card__tags">
+                            <span class="card__tag--type"><span class="sr-only">Catégorie :</span>  Bloquant</span>
+                            <span class="card__tag--tomate">
+                                <i data-feather="circle" aria-hidden="true"></i>
+                                <span class="sr-only">Nombre de tomates lancées</span> 130
+                            </span>
+                        </div>
+                    </header>
+                    <section class="card__body">
+                        <h3 class="card__title">Doctolib</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sollicitudin ut ipsum eget
+                            egestas. Mauris cursus non nibh et tristique. In eu enim ex. Etiam condimentum ante eget risus
+                            luctus, vel interdum justo ultricies. Proin egestas, sem sit amet vulputate pellentesque, ipsum
+                            diam faucibus sapien, ac semper eros eros at libero. Pellentesque magna metus, aliquam eget urna
+                            a, facilisis elementum libero. Mauris vitae gravida ligula, a sodales orci. Morbi varius leo
+                            magna, eu tempus tellus scelerisque cursus.
+    
+                            Sed vitae fringilla elit. Proin vel ultrices arcu. Nunc vel euismod velit. Nunc fermentum dui
+                            nec sodales pellentesque. Duis tempus eros sit amet enim dapibus tempus. Proin porttitor
+                            fringilla sollicitudin. Sed lacus odio, fringilla vel molestie sed, pellentesque ut nisi. Morbi
+                            sagittis magna cursus libero dignissim porttitor. Proin dignissim quam convallis nulla
+                            pellentesque auctor. Etiam lectus eros, ullamcorper non viverra nec, mattis vitae dolor. Sed at
+                            neque fermentum, cursus tellus id, ullamcorper massa. Aenean tellus quam, feugiat a maximus sed,
+                            vehicula non mi.
+                        </p>
+                        <a href="./site_tomate.html" class="card__link" aria-label="Lire la suite : Doctolib">Lire la suite</a>
+                    </section>
+                    <footer class="card__footer">
+                        <a href="https://www.doctolib.fr/" class="card__link" target="_blank">
+                            Consulter le site
+                            <span class="sr-only">Nouvelle fenêtre</span>
+                            <i data-feather="external-link" aria-hidden="true"></i>
+                        </a>
+                        <div class="card__actions">
+                            <button class="card__btn card__btn--tomate">
+                                <i data-feather="circle" aria-hidden="true"></i>
+                                <span class="sr-only">Dénoncer le site</span>
+                            </button>
+                            
+                            <button class="card__btn card__btn--check">
+                                <i data-feather="check" aria-hidden="true"></i>
+                                <span class="sr-only">Valider le site</span>
+                            </button>
+                            
+                            <button class="card__btn card__btn--share" aria-label="Partager le site">
+                                <i data-feather="share-2" aria-hidden="true"></i>
+                                
+                            </button>
+                        </div>
+                    </footer>
+                </article>
+
+                <article class="card">
+                    <header class="card__header">
+                        <div class="card__tags">
+                            <span class="card__tag--type"><span class="sr-only">Catégorie :</span>  Bloquant</span>
+                            <span class="card__tag--tomate">
+                                <i data-feather="circle" aria-hidden="true"></i>
+                                <span class="sr-only">Nombre de tomates lancées</span> 130
+                            </span>
+                        </div>
+                    </header>
+                    <section class="card__body">
+                        <h3 class="card__title">Doctolib</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sollicitudin ut ipsum eget
+                            egestas. Mauris cursus non nibh et tristique. In eu enim ex. Etiam condimentum ante eget risus
+                            luctus, vel interdum justo ultricies. Proin egestas, sem sit amet vulputate pellentesque, ipsum
+                            diam faucibus sapien, ac semper eros eros at libero. Pellentesque magna metus, aliquam eget urna
+                            a, facilisis elementum libero. Mauris vitae gravida ligula, a sodales orci. Morbi varius leo
+                            magna, eu tempus tellus scelerisque cursus.
+    
+                            Sed vitae fringilla elit. Proin vel ultrices arcu. Nunc vel euismod velit. Nunc fermentum dui
+                            nec sodales pellentesque. Duis tempus eros sit amet enim dapibus tempus. Proin porttitor
+                            fringilla sollicitudin. Sed lacus odio, fringilla vel molestie sed, pellentesque ut nisi. Morbi
+                            sagittis magna cursus libero dignissim porttitor. Proin dignissim quam convallis nulla
+                            pellentesque auctor. Etiam lectus eros, ullamcorper non viverra nec, mattis vitae dolor. Sed at
+                            neque fermentum, cursus tellus id, ullamcorper massa. Aenean tellus quam, feugiat a maximus sed,
+                            vehicula non mi.
+                        </p>
+                        <a href="./site_tomate.html" class="card__link" aria-label="Lire la suite : Doctolib">Lire la suite</a>
+                    </section>
+                    <footer class="card__footer">
+                        <a href="https://www.doctolib.fr/" class="card__link" target="_blank">
+                            Consulter le site
+                            <span class="sr-only">Nouvelle fenêtre</span>
+                            <i data-feather="external-link" aria-hidden="true"></i>
+                        </a>
+                        <div class="card__actions">
+                            <button class="card__btn card__btn--tomate">
+                                <i data-feather="circle" aria-hidden="true"></i>
+                                <span class="sr-only">Dénoncer le site</span>
+                            </button>
+                            <button class="card__btn card__btn--check">
+                                <i data-feather="check" aria-hidden="true"></i>
+                                <span class="sr-only">Valider le site</span>
+                            </button>
+                            <button class="card__btn card__btn--share">
+                                <i data-feather="share-2" aria-hidden="true"></i>
+                                <span class="sr-only">Partager le site</span>
+                            </button>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+
+            <div class="more">
+                <button class="more__btn" aria-label="En voir plus de sites tomatés">En voir plus</button>
+            </div>
+        </section>
+        <section id="report">
+            <h2>Dénoncer un site inaccessible</h2>
+            <form class="form" autocomplete="on">
+
+                <p>Les champs marqués par une astérisque (*) sont obligatoires</p>
+
+                <label for="title">Titre du dysfonctionnement *</label>
+                <input type="text" name="title" id="title" required>
+
+                <label for="desc">Description du dysfonctionnement *</label>
+                <textarea name="desc" id="desc" cols="30" rows="8" required></textarea>
+
+                <label for="url">URL où est constaté le dysfonctionnement *</label>
+                <input type="text" name="url" id="url" aria-invalid="true" aria-describedby="url-error" required>
+                <p id="url-error">Veuillez saisir une URL valide : www.exemple.com</p>
+
+                <label for="support">Sur quel type de support ? *</label>
+                <select name="support" id="support">
+                    <option value="">--Choisissez votre support--</option>
+                    <option value="mobile">Mobile</option>
+                    <option value="ordinateur">Ordinateur</option>
+                    <option value="lecteur">Lecteur d'écran</option>
+                </select>
+
+                <fieldset>
+                    <legend>Quel degré d'importance ?</legend>
+                    <div>
+                        <input type="radio" name="importance" id="bloquant">
+                        <label for="bloquant">Bloquant</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="importance" id="genant">
+                        <label for="genant">Génant</label> 
+                    </div>
+                   
+                    <div>
+                        <input type="radio" name="importance" id="casse-tete">
+                        <label for="casse-tete">Casse-tête</label>
+                    </div>
+                </fieldset>
+                
+
+                <input class="form__btn" type="submit" value="Soumettre le dysfonctionnement à l'équipe de modération">
+
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <nav aria-label="Menu secondaire"> 
+            <a class="footer-link" href="#">Plan du site</a>
+            <a class="footer-link" href="#">Mentions légales</a>
+            <a class="footer-link" href="#">Contact</a>
+        </nav>   
+    </footer>
+</body>
+
+</html>
