@@ -1,0 +1,29 @@
+@use '../vars';
+@use '../mixin';
+
+.btnbody {
+    display: none;
+    position: fixed;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0.8rem;
+    bottom: 3rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.change {
+    display: flex;
+    justify-content: flex-end;
+   
+
+    &-item {
+        padding: 1rem 1.5rem;
+        background-color: #778BEB;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 1.5rem;
+    }
+}
+

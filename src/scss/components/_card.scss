@@ -6,10 +6,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-
 }
 
 .card {
+
     border-radius: 5px; //on arrondi les cards
     box-sizing: border-box; // On fixe la taille des card en prenant en compte les padding
     font-size: 1.5rem;
@@ -104,5 +104,41 @@
         justify-content: flex-end;
         align-items: center;
         gap: .5rem;
+    }
+}
+
+
+// on crée une nouvelle classe à transformer en liste
+.cards-change {
+    @include mixin.big{
+        flex-direction: column;
+    }
+}
+
+
+.card-change {
+  
+    border-radius: 5px; //on arrondi les cards
+    box-sizing: border-box; // On fixe la taille des card en prenant en compte les padding
+    font-size: 1.5rem;
+    width: 100%;
+    /** Outil pour les box shadow 
+    https://html-css-js.com/css/generator/box-shadow  */
+    -webkit-box-shadow: 0px 10px 13px -7px vars.$border, 5px 4px 16px 3px rgba(0, 0, 0, 0);
+    box-shadow: 0px 10px 13px -7px  vars.$border, 5px 4px 16px 3px rgba(0, 0, 0, 0);
+
+
+
+    @include mixin.medium{
+        width: calc((100% - 2rem) / 2);
+        // ou alors 
+        //width: 45%
+    }
+
+    @include mixin.big{
+        display: flex;
+        flex-direction: row;
+       justify-content: space-between;
+        width: 100%;
     }
 }

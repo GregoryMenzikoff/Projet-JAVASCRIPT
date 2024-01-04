@@ -4,6 +4,8 @@
 .search {
   display: none;
 
+  
+
   @include mixin.small {
   display: flex;
   }
@@ -13,6 +15,7 @@
     border: 0;
     border-left: 1px solid var(--border);
     width: 10em;
+
 
     @include mixin.medium {
       width: 15em;
@@ -41,4 +44,20 @@
       color: black;
     }
   }
+
+ 
+}
+
+.visibility-search {
+  @include mixin.verysmall {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    display: flex;
+    background-color: white;
+    width: 100%;
+    justify-content: space-between;
+    transform: translateY(100%);
+  }
+  
 }

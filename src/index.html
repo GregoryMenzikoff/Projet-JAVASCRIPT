@@ -31,7 +31,11 @@
                 </button>
             </form>
             <div class="account">
-                <a class="account-link account-link--mobile" href="#">
+                <button id="btn" class="account-link account-link--mobile">
+                    <i data-feather="menu" aria-hidden="true"></i>
+                    <span class="sr-only">Menu</span>
+                </button>
+                <a id="form-search" class="account-link account-link--mobile" href="#">
                     <i data-feather="search" aria-hidden="true"></i>
                     <span class="sr-only">Rechercher</span>
                 </a>
@@ -72,7 +76,12 @@
         </section>
         <section class="pires">
             <h2 class="pires__title">Les PIRES !</h2>
-
+            <div class="change">
+                <button class="change-item">
+                    <i data-feather="list"></i>
+                </button>
+            </div>
+           
             <div class="cards">
                 <article class="card">
                     <header class="card__header">
